@@ -1,0 +1,44 @@
+# .gitignore
+# This file is used by Git to specify which files or directories should not be tracked.
+# Lines starting with # are comments.
+
+# Visual Studio files
+*.suo
+*.user
+*.vshost.exe
+*.webinfo
+*.db
+*.pdb
+*.log
+*.cache
+*.scc
+*.vspscc
+*.userprefs
+*.tmp
+*.obj
+*.a
+*.so
+*.dylib
+*.nfw
+*.ipk
+*.o
+*.pch
+*.d
+*.csproj.user
+
+# NuGet package files
+packages
+*.nupkg
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*.swx
+*.swo
+*.swn
+*.bak
+
+# IDE-specific files
+# Visual Studio Code
+.vscode/
