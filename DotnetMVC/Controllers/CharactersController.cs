@@ -20,9 +20,22 @@ namespace DotnetMVC.Controllers
         }
 
         // GET: Characters
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString)
         {
-            return View(await _context.Character.ToListAsync());
+            if (_context.Character == null)
+            {
+                return Problem("Entity set 'MvcCharacterContext.Character'  is null.");
+            }
+
+            var characters = from m in _context.Character
+                        select m;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                characters = characters.Where(s => s.Name!.ToUpper().Contains(searchString.ToUpper()));
+            }
+
+            return View(await characters.ToListAsync());
         }
 
         // GET: Characters/Details/5
