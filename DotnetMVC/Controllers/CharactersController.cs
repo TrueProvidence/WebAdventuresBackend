@@ -20,23 +20,38 @@ namespace DotnetMVC.Controllers
         }
 
         // GET: Characters
-        public async Task<IActionResult> Index(string searchString)
-        {
-            if (_context.Character == null)
-            {
-                return Problem("Entity set 'MvcCharacterContext.Character'  is null.");
-            }
+        public async Task<IActionResult> Index(string CharacterCampaign, string searchString)
+{
+    if (_context.Character == null)
+    {
+        return Problem("Entity set 'MvcCharacterContext.Character'  is null.");
+    }
 
-            var characters = from m in _context.Character
-                        select m;
+    // Use LINQ to get list of Campaigns.
+    IQueryable<string> CampaignQuery = from m in _context.Character
+                                    orderby m.Campaign
+                                    select m.Campaign;
+    var Characters = from m in _context.Character
+                 select m;
 
-            if (!String.IsNullOrEmpty(searchString))
-            {
-                characters = characters.Where(s => s.Name!.ToUpper().Contains(searchString.ToUpper()));
-            }
+    if (!string.IsNullOrEmpty(searchString))
+    {
+        Characters = Characters.Where(s => s.Name!.ToUpper().Contains(searchString.ToUpper()));
+    }
 
-            return View(await characters.ToListAsync());
-        }
+    if (!string.IsNullOrEmpty(CharacterCampaign))
+    {
+        Characters = Characters.Where(x => x.Campaign == CharacterCampaign);
+    }
+
+    var characterCampaignVM = new CharacterCampaignViewModel
+    {
+        Campaigns = new SelectList(await CampaignQuery.Distinct().ToListAsync()),
+        Characters = await Characters.ToListAsync()
+    };
+
+    return View(characterCampaignVM);
+    }
 
         // GET: Characters/Details/5
         public async Task<IActionResult> Details(int? id)

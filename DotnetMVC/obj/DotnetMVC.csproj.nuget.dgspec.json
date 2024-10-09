@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lucac\\Documents\\GitHub\\ViteRTSPlayground\\WebAdventuresBackend\\DotnetMVC\\DotnetMVC.csproj": {}
+    "c:\\Users\\lucac\\Documents\\GitHub\\ViteRTSPlayground\\WebAdventuresBackend\\DotnetMVC\\DotnetMVC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lucac\\Documents\\GitHub\\ViteRTSPlayground\\WebAdventuresBackend\\DotnetMVC\\DotnetMVC.csproj": {
+    "c:\\Users\\lucac\\Documents\\GitHub\\ViteRTSPlayground\\WebAdventuresBackend\\DotnetMVC\\DotnetMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lucac\\Documents\\GitHub\\ViteRTSPlayground\\WebAdventuresBackend\\DotnetMVC\\DotnetMVC.csproj",
+        "projectUniqueName": "c:\\Users\\lucac\\Documents\\GitHub\\ViteRTSPlayground\\WebAdventuresBackend\\DotnetMVC\\DotnetMVC.csproj",
         "projectName": "DotnetMVC",
-        "projectPath": "C:\\Users\\lucac\\Documents\\GitHub\\ViteRTSPlayground\\WebAdventuresBackend\\DotnetMVC\\DotnetMVC.csproj",
+        "projectPath": "c:\\Users\\lucac\\Documents\\GitHub\\ViteRTSPlayground\\WebAdventuresBackend\\DotnetMVC\\DotnetMVC.csproj",
         "packagesPath": "C:\\Users\\lucac\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lucac\\Documents\\GitHub\\ViteRTSPlayground\\WebAdventuresBackend\\DotnetMVC\\obj\\",
+        "outputPath": "c:\\Users\\lucac\\Documents\\GitHub\\ViteRTSPlayground\\WebAdventuresBackend\\DotnetMVC\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
