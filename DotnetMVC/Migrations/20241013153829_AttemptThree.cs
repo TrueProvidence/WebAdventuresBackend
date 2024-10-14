@@ -5,7 +5,7 @@
 namespace DotnetMVC.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class AttemptThree : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -17,7 +17,7 @@ namespace DotnetMVC.Migrations
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Name = table.Column<string>(type: "TEXT", nullable: true),
-                    Type = table.Column<string>(type: "TEXT", nullable: true),
+                    Campaign = table.Column<string>(type: "TEXT", nullable: true),
                     Health = table.Column<int>(type: "INTEGER", nullable: true),
                     Currency = table.Column<int>(type: "INTEGER", nullable: true),
                     Items = table.Column<string>(type: "TEXT", nullable: true)

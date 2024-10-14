@@ -1,0 +1,107 @@
+﻿@{
+    ViewData["Title"] = "Characters[WIP]";
+}
+<h1>@ViewData["Title"]</h1>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Select</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container py-4">
+        
+        <div class="row">
+            <!-- Sidebar with character list and filter form -->
+            <div class="col-md-3">
+                <div class="d-flex flex-column gap-3">
+                    <div class="btn-group">
+                        <a href="#save" class="btn btn-outline-primary w-100">SAVE & EXIT</a>
+                        <a href="#campaigns" class="btn btn-outline-secondary w-100">Campaigns</a>
+                    </div>
+
+                    <button class="btn btn-primary w-100">Create New</button>
+
+                    <!-- Filter Form -->
+                    <form class="mb-3">
+                        <div class="mb-3">
+                            <label for="campaignFilter" class="form-label">Filter by Campaign:</label>
+                            <select id="campaignFilter" class="form-select">
+                                <option value="">All Campaigns</option>
+                                <option value="Campaign1">Campaign 1</option>
+                                <option value="Campaign2">Campaign 2</option>
+                                <option value="Campaign3">Campaign 3</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="nameSearch" class="form-label">Search by Name:</label>
+                            <input type="text" id="nameSearch" class="form-control" placeholder="Character Name">
+                        </div>
+                        <button type="submit" class="btn btn-secondary w-100">Filter</button>
+                    </form>
+
+                    <!-- List of Characters (Table) -->
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Campaign</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr onclick="showCharacterDetails('Timmy', 'Campaign 1', 100, 50, 'Sword, Shield')">
+                                <td>CLICK ME</td>
+                                <td>Campaign 1</td>
+                            </tr>
+                            <tr onclick="showCharacterDetails('Miel', 'Campaign 2', 80, 30, 'Bow, Arrows')">
+                                <td>I LIKE BEING CLICKED TOO</td>
+                                <td>Campaign 2</td>
+                            </tr>
+                            <tr onclick="showCharacterDetails('Rob', 'Campaign 3', 90, 20, 'Magic Wand')">
+                                <td>DONT CLICK ME</td>
+                                <td>Campaign 3</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Character Detail Section -->
+            <div class="col-md-9">
+                <div class="border p-3" id="characterDetails">
+                    <h4>Character Name: <span id="characterName">-</span></h4>
+                    <h5>Current Campaign: <span id="characterCampaign">-</span></h5>
+                    
+                    <div class="row mt-4">
+                        <div class="col-md-4">
+                            <div class="border p-3 text-center">
+                                <img src="https://placehold.co/150x150" class="rounded mb-3" alt="Character Image">
+                                <h6>Stats</h6>
+                                <p>Health: <span id="characterHealth">-</span></p>
+                                <p>Currency: <span id="characterCurrency">-</span></p>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="border p-3">
+                                <h6>Character Sheet</h6>
+                                <p>Item List: <span id="characterItems">-</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script>
+        function showCharacterDetails(name, campaign, health, currency, items) {
+            document.getElementById('characterName').textContent = name;
+            document.getElementById('characterCampaign').textContent = campaign;
+            document.getElementById('characterHealth').textContent = health;
+            document.getElementById('characterCurrency').textContent = currency;
+            document.getElementById('characterItems').textContent = items;
+        }
+    </script>
+</body>

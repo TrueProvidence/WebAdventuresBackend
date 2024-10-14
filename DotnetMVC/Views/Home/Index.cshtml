@@ -2,7 +2,83 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body>
+    <div class="container py-5">
+
+        <!-- Welcome Section -->
+        <div class="row mb-4">
+            <div class="col-12 text-center p-4 border">
+                <h1>Welcome to Elysium!</h1>
+            </div>
+        </div>
+
+        <div class="row mb-4">
+
+            <!-- Sign Up Button -->
+            <div class="col-md-6">
+                <a type="button" class="btn btn-primary" asp-controller="Home" asp-action="Characters">
+                    <div class="p-4 border text-center justify-center">
+                        <h2>SIGN UP</h2>
+                        <p>[Pressing this will reveal a sign up grid]</p>
+                        <p>{A successful sign up will continue to Character Creation}</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Log In Button -->
+            <div class="col-md-6">
+                <a type="button" class="btn btn-success" asp-controller="Home" asp-action="Campaigns">
+                    <div class="p-4 border text-center justify-center">
+                        <h2>LOG IN</h2>
+                        <p>[Pressing this will reveal a log in grid]</p>
+                        <p>{A successful login will continue to Campaign Select}</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="row text-center">
+
+            <!-- A game by Providence -->
+            <div class="col-md-3 mb-3">
+                <div class="border p-3">
+                    <h5>A game by Providence</h5>
+                </div>
+            </div>
+
+            <!-- Tip Jar -->
+            <div class="col-md-3 mb-3">
+                <div class="border p-3">
+                    <img src="DotnetMVC\resources\Leonardo_Anime_XL_A_mystical_coin_jar_0.png" alt="IMAGE NOT RECOGNISED">
+                    <p>Tip Jar</p>
+                </div>
+            </div>
+
+            <!-- Feedback button -->
+            <div class="col-md-3 mb-3">
+                <div class="border p-3">
+                    <button type="button" class="btn btn-link" href="2306574doenen@zuyd.nl">Feedback button</button>
+                </div>
+            </div>
+
+            <!-- Social Media Plugs -->
+            <div class="col-md-3 mb-3">
+                <div class="border p-3">
+                    <h5>Social Media</h5>
+                    <a href="#" class="me-2"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="me-2"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="me-2"><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>

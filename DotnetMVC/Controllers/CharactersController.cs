@@ -21,37 +21,37 @@ namespace DotnetMVC.Controllers
 
         // GET: Characters
         public async Task<IActionResult> Index(string CharacterCampaign, string searchString)
-{
-    if (_context.Character == null)
-    {
-        return Problem("Entity set 'MvcCharacterContext.Character'  is null.");
-    }
+        {
+            if (_context.Character == null)
+            {
+                return Problem("Entity set 'MvcCharacterContext.Character'  is null.");
+            }
 
-    // Use LINQ to get list of Campaigns.
-    IQueryable<string> CampaignQuery = from m in _context.Character
-                                    orderby m.Campaign
-                                    select m.Campaign;
-    var Characters = from m in _context.Character
-                 select m;
+            // Use LINQ to get list of Campaigns.
+            IQueryable<string> CampaignQuery = from m in _context.Character
+                                            orderby m.Campaign
+                                            select m.Campaign;
+            var Characters = from m in _context.Character
+                        select m;
 
-    if (!string.IsNullOrEmpty(searchString))
-    {
-        Characters = Characters.Where(s => s.Name!.ToUpper().Contains(searchString.ToUpper()));
-    }
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                Characters = Characters.Where(s => s.Name!.ToUpper().Contains(searchString.ToUpper()));
+            }
 
-    if (!string.IsNullOrEmpty(CharacterCampaign))
-    {
-        Characters = Characters.Where(x => x.Campaign == CharacterCampaign);
-    }
+            if (!string.IsNullOrEmpty(CharacterCampaign))
+            {
+                Characters = Characters.Where(x => x.Campaign == CharacterCampaign);
+            }
 
-    var characterCampaignVM = new CharacterCampaignViewModel
-    {
-        Campaigns = new SelectList(await CampaignQuery.Distinct().ToListAsync()),
-        Characters = await Characters.ToListAsync()
-    };
+            var characterCampaignVM = new CharacterCampaignViewModel
+            {
+                Campaigns = new SelectList(await CampaignQuery.Distinct().ToListAsync()),
+                Characters = await Characters.ToListAsync()
+            };
 
-    return View(characterCampaignVM);
-    }
+            return View(characterCampaignVM);
+        }
 
         // GET: Characters/Details/5
         public async Task<IActionResult> Details(int? id)
@@ -82,7 +82,7 @@ namespace DotnetMVC.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Type,Health,Currency,Items")] Character character)
+        public async Task<IActionResult> Create([Bind("Id,Name,Campaign,Health,Currency,Items")] Character character)
         {
             if (ModelState.IsValid)
             {
@@ -114,7 +114,7 @@ namespace DotnetMVC.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Type,Health,Currency,Items")] Character character)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Campaign,Health,Currency,Items")] Character character)
         {
             if (id != character.Id)
             {

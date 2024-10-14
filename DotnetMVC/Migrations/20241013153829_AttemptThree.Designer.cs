@@ -11,8 +11,8 @@ using MvcCharacter.Data;
 namespace DotnetMVC.Migrations
 {
     [DbContext(typeof(MvcCharacterContext))]
-    [Migration("20241008102311_CampaignInCharacter")]
-    partial class CampaignInCharacter
+    [Migration("20241013153829_AttemptThree")]
+    partial class AttemptThree
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -18,7 +18,12 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult Privacy()
+    public IActionResult Characters()
+    {
+        return View();
+    }
+
+    public IActionResult Campaigns()
     {
         return View();
     }
