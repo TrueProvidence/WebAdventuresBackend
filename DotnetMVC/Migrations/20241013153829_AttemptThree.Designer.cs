@@ -11,8 +11,8 @@ using MvcCharacter.Data;
 namespace DotnetMVC.Migrations
 {
     [DbContext(typeof(MvcCharacterContext))]
-    [Migration("20240917123635_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20241013153829_AttemptThree")]
+    partial class AttemptThree
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -26,6 +26,9 @@ namespace DotnetMVC.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
+                    b.Property<string>("Campaign")
+                        .HasColumnType("TEXT");
+
                     b.Property<int?>("Currency")
                         .HasColumnType("INTEGER");
 
@@ -36,9 +39,6 @@ namespace DotnetMVC.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Name")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Type")
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");

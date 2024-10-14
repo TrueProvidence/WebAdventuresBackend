@@ -54,12 +54,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGVsbG9Xb3JsZFxXZWxjb21lLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/lucac/Documents/GitHub/ViteRTSPlayground/WebAdventuresBackend/DotnetMVC/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+[c:/Users/lucac/Documents/GitHub/ViteRTSPlayground/WebAdventuresBackend/DotnetMVC/Views/Home/Campaigns.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDYW1wYWlnbnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/lucac/Documents/GitHub/ViteRTSPlayground/WebAdventuresBackend/DotnetMVC/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+[c:/Users/lucac/Documents/GitHub/ViteRTSPlayground/WebAdventuresBackend/DotnetMVC/Views/Home/Characters.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDaGFyYWN0ZXJzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[c:/Users/lucac/Documents/GitHub/ViteRTSPlayground/WebAdventuresBackend/DotnetMVC/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [c:/Users/lucac/Documents/GitHub/ViteRTSPlayground/WebAdventuresBackend/DotnetMVC/Views/Shared/Error.cshtml]

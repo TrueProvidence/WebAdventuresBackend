@@ -23,6 +23,9 @@ namespace DotnetMVC.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
+                    b.Property<string>("Campaign")
+                        .HasColumnType("TEXT");
+
                     b.Property<int?>("Currency")
                         .HasColumnType("INTEGER");
 
@@ -33,9 +36,6 @@ namespace DotnetMVC.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Name")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Type")
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
