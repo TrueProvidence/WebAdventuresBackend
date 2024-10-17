@@ -276,3 +276,8 @@ C:\Users\lucac\Documents\GitHub\ViteRTSPlayground\WebAdventuresBackend\DotnetMVC
 C:\Users\lucac\Documents\GitHub\ViteRTSPlayground\WebAdventuresBackend\DotnetMVC\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\lucac\Documents\GitHub\ViteRTSPlayground\WebAdventuresBackend\DotnetMVC\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
 c:\Users\lucac\Documents\GitHub\ViteRTSPlayground\WebAdventuresBackend\DotnetMVC\obj\Debug\net8.0\DotnetMVC.sourcelink.json
+c:\Users\lucac\Documents\GitHub\ViteRTSPlayground\WebAdventuresBackend\DotnetMVC\bin\Debug\net8.0\Microsoft.OpenApi.dll
+c:\Users\lucac\Documents\GitHub\ViteRTSPlayground\WebAdventuresBackend\DotnetMVC\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+c:\Users\lucac\Documents\GitHub\ViteRTSPlayground\WebAdventuresBackend\DotnetMVC\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+c:\Users\lucac\Documents\GitHub\ViteRTSPlayground\WebAdventuresBackend\DotnetMVC\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+c:\Users\lucac\Documents\GitHub\ViteRTSPlayground\WebAdventuresBackend\DotnetMVC\obj\Debug\net8.0\DotnetMVC.MvcApplicationPartsAssemblyInfo.cs
