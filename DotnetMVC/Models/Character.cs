@@ -10,6 +10,6 @@ namespace DotnetMVC.Models
         public string? Campaign { get; set; }
         public int? Health { get; set; }
         public int? Currency { get; set; }
-        public List<string>? Items { get; set; }
+        public string? Items { get; set; } //simplified for now
     }
 }
